@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nishita Ervantikar - Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      font-size: 14px;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #222;
+      padding: 40px 10%;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header img {
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    header .intro {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    section {
+      padding: 40px 0;
+      max-width: 1000px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .logos img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      font-size: 1.4rem;
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .tick-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+
+
+#blogs h2 {
+  margin-bottom: 40px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 20px;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 150px; /* Adjust the height to fill the upper part */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-card h3 {
+  font-size: 0.85rem; /* Smaller font size for the title */
+  margin: 10px;
+}
+
+.blog-card h3 a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.blog-card h3 a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.blog-card p {
+  font-size: 0.3rem;
+  margin: 0 10px 10px;
+  color: #555;
+}
+
+#blogs p {
+  font-size: 0.7rem;
+  text-align: left;
+  margin-top: 10px;
+}
+
+#blogs p a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#blogs p a:hover {
+  text-decoration: underline;
+}
+
+
+#projects h2 {
+  margin-bottom: 40px;
+ }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-card h3 {
+  font-size: 0.95rem;
+  margin: 8px 10px;
+}
+
+.project-card p {
+  font-size: 0.6rem;
+  margin: 0 10px 10px;
+  color: #555;
+}
+
+
+
+#quick-notes h2 {
+  margin-bottom: 40px;
+
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.note-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  text-decoration: none;
+  color: #000;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  height: 90px;
+  overflow: hidden;
+}
+
+.note-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.note-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.note-card p {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .project-grid, .notes-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .project-grid, .notes-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid, .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Breakpoints for Blog Grid */
+@media (max-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <img src="nishimage.jpg" alt="Nishita's photo">
+    <div class="intro">
+      <h1>Nishita Ervantikar</h1>
+      <p>Full-Stack Developer with Applied AI | Building smarter, faster, and stronger apps</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#freelance">Freelance</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a developer with 2+ years of experience at startups. I specialize in full stack web development, but also work with ML, agents, and automation to drive modern solutions. I subtly integrate today's AI advancements like LLMs and agents into my work.</p>
+  </section>
+
+  <section id="skills">
+  <h2>Concepts, Skills & Tools</h2>
+  <p>
+    I work across the entire web development stack and software lifecycle. My technical foundation includes modern frameworks like <strong>Angular</strong>, <strong>React</strong>, and <strong>Node.js</strong>, with deep understanding of <strong>JavaScript</strong>, <strong>TypeScript</strong>, <strong>HTML5</strong>, and <strong>CSS3</strong>. I build robust backend systems with <strong>Express</strong>, <strong>SQL</strong>, and <strong>MongoDB</strong>, and design scalable system architectures using <strong>microservices</strong> and <strong>RESTful APIs</strong>. I am proficient with <strong>Git</strong>, <strong>GitHub</strong>, and <strong>CI/CD workflows</strong> using <strong>Docker</strong> and <strong>GitHub Actions</strong>. My experience extends to <strong>DevOps</strong>, <strong>testing (unit, integration, E2E)</strong>, <strong>cloud services (AWS, Vercel)</strong>, and infrastructure automation. I explore and use <strong>AI/ML tools</strong> like <strong>Python</strong>, <strong>scikit-learn</strong>, and <strong>agents</strong> for automating solutions. I’m also deeply familiar with <strong>system design</strong>, <strong>software architecture</strong>, <strong>networking basics</strong>, <strong>operating systems</strong>, and <strong>data structures & algorithms</strong> that make efficient, real-world solutions possible.
+  </p>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+    <a href="https://github.com/project1" class="project-card" target="_blank">
+      <img src="project1.jpg" alt="AI Resume Parser" />
+      <h3>AI Resume Parser</h3>
+      <p>Extracts structured data from resumes using NLP and ML models.</p>
+    </a>
+    <a href="https://github.com/project2" class="project-card" target="_blank">
+      <img src="project2.jpg" alt="DevOps CI/CD Dashboard" />
+      <h3>DevOps CI/CD Dashboard</h3>
+      <p>Real-time monitoring of build pipelines with Grafana and Prometheus.</p>
+    </a>
+    <a href="https://github.com/project3" class="project-card" target="_blank">
+      <img src="project3.jpg" alt="E-Commerce Backend" />
+      <h3>E-Commerce Backend</h3>
+      <p>Built with Node.js, Express, MongoDB, and JWT for authentication.</p>
+    </a>
+    <a href="https://github.com/project4" class="project-card" target="_blank">
+      <img src="project4.jpg" alt="Portfolio Website" />
+      <h3>Portfolio Website</h3>
+      <p>Minimal and fast personal website to showcase my work and writing.</p>
+    </a>
+    <a href="https://github.com/project5" class="project-card" target="_blank">
+      <img src="project5.jpg" alt="Real-Time Chat App" />
+      <h3>Real-Time Chat App</h3>
+      <p>Chat app using Socket.IO, Node.js, and Redis for message storage.</p>
+    </a>
+    <a href="https://github.com/project6" class="project-card" target="_blank">
+      <img src="project6.jpg" alt="Angular Task Manager" />
+      <h3>Angular Task Manager</h3>
+      <p>Modern UI with Angular, Material Design, and RESTful APIs.</p>
+    </a>
+    <a href="https://github.com/project7" class="project-card" target="_blank">
+      <img src="project7.jpg" alt="SQL Visualizer" />
+      <h3>SQL Visualizer</h3>
+      <p>Visual SQL query debugger and editor with syntax highlighting.</p>
+    </a>
+    <a href="https://github.com/project8" class="project-card" target="_blank">
+      <img src="project8.jpg" alt="Blog CMS" />
+      <h3>Blog CMS</h3>
+      <p>Full-stack CMS with user auth, Markdown editor, and admin dashboard.</p>
+    </a>
+    <!-- Placeholder Cards 9-50 -->
+    <!-- You can replace with real project data later -->
+    <!-- Repeat structure for remaining -->
+    <!-- Example placeholder: -->
+    <a href="https://github.com/project9" class="project-card" target="_blank">
+      <img src="project9.jpg" alt="Project 9" />
+      <h3>Project 9</h3>
+      <p>This is a placeholder description for Project 9.</p>
+    </a>
+    <!-- Repeat up to 50 -->
+  </div>
+
+  <p style="text-align:left; margin-top:20px;">
+    <a href="https://github.com/yourgithub" target="_blank">Explore All Projects on GitHub →</a>
+  </p>
+</section>
+
+<section id="blogs">
+  <h2>My Blogs</h2>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img src="blog1.png" alt="Blog 1" />
+      <h3><a href="https://www.linkedin.com" target="_blank">What Happens when we press ls and hit enter</a></h3>
+      <p>Zooming into series of processes taht give us result</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog2.jpg" alt="Blog 2" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 2</a></h3>
+      <p>Deep Dive into Angular</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog3.jpg" alt="Blog 3" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 3</a></h3>
+      <p>Understanding Node.js Basics</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog4.jpg" alt="Blog 4" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 4</a></h3>
+      <p>Mastering Git for Developers</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog5.jpg" alt="Blog 5" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 5</a></h3>
+      <p>System Design Principles</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog6.jpg" alt="Blog 6" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 6</a></h3>
+      <p>Building RESTful APIs</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog7.jpg" alt="Blog 7" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 7</a></h3>
+      <p>JavaScript Fundamentals</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog8.jpg" alt="Blog 8" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 8</a></h3>
+      <p>Advanced CSS Techniques</p>
+    </div>
+    <div class="blog-card">
+      <img src="blog9.jpg" alt="Blog 9" />
+      <h3><a href="https://www.linkedin.com" target="_blank">Blog 9</a></h3>
+      <p>Introduction to Databases</p>
+    </div>
+  </div>
+
+  <!-- Newsletter link at the end -->
+  <p style="text-align:left; margin-top:20px;">
+    <a href="https://www.example.com/newsletter" target="_blank">View My Newsletter →</a>
+  </p>
+</section>
+
+<section id="quick-notes">
+  <h2>Quick Notes</h2>
+  <div class="notes-grid">
+    <a class="note-card" href="https://www.notion.so/your-notes/os-concepts" target="_blank">
+      <h3>Operating Systems</h3>
+      <p>Processes, threads, memory, scheduling</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/networking" target="_blank">
+      <h3>Networking</h3>
+      <p>TCP/IP, DNS, HTTP, WebSockets</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/databases" target="_blank">
+      <h3>Databases</h3>
+      <p>SQL, NoSQL, indexing, transactions</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/git-github" target="_blank">
+      <h3>Git & GitHub</h3>
+      <p>Version control, branching, PRs</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/dsa" target="_blank">
+      <h3>DSA</h3>
+      <p>Arrays, Trees, Graphs, Recursion</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/system-design" target="_blank">
+      <h3>System Design</h3>
+      <p>Load balancing, caching, scalability</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/devops" target="_blank">
+      <h3>DevOps</h3>
+      <p>CI/CD, Docker, Kubernetes, monitoring</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/frontend" target="_blank">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, JS, Angular, performance</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/backend" target="_blank">
+      <h3>Backend</h3>
+      <p>Node.js, APIs, auth, async handling</p>
+    </a>
+    <a class="note-card" href="https://www.notion.so/your-notes/ai-ml" target="_blank">
+      <h3>AI/ML</h3>
+      <p>Models, data prep, use cases</p>
+    </a>
+  </div>
+</section>
+
+
+  <section id="freelance">
+    <h2>Freelance Services</h2>
+    <p>I solve problems. You bring the challenge, I bring the solution — whether it's full stack development, automation, LLM-powered workflows, websites, system design, or integrations.</p>
+    <h3 style="margin-top: 20px;">Testimonials</h3>
+    <ul>
+      <li>“Nishita delivered a robust web platform in record time. Highly recommended!” – Startup CTO</li>
+      <li>“She brought clarity and execution to our system design challenge.” – Product Manager</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourusername"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/yourusername"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nishita Ervantikar. Built with ❤️ for the future me.</p>
+  </footer>
+
+</body>
+</html>

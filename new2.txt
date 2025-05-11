@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nishita Ervantikar - Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #222; line-height: 1.6; }
+    header, section { max-width: 1200px; margin: auto; padding: 40px 20px; }
+    header { background: #111; color: #fff; text-align: center; }
+    header img { width: 120px; height: 120px; border-radius: 50%; margin-top: 20px; }
+    h1 { font-size: 2.5rem; margin-top: 20px; }
+    h2 { margin-bottom: 20px; }
+    section { margin-top: 40px; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 16px; }
+    .card, .iframe-card { padding: 10px; border-radius: 10px; background: #f1f1f1; text-align: center; overflow: hidden; }
+    .card img { width: 100%; height: auto; border-radius: 6px; }
+    .iframe-card iframe { width: 100%; height: 150px; border: none; border-radius: 6px; }
+    .blog-card img { width: 100%; height: 100px; object-fit: cover; border-radius: 6px; }
+    .blog-card a { display: block; margin-top: 10px; text-decoration: none; color: #222; font-weight: bold; }
+    footer { text-align: center; padding: 20px; background: #111; color: white; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="profile.jpg" alt="Nishita's Photo" />
+  <h1>Nishita Ervantikar</h1>
+  <p>Full Stack Developer | Generalist | AI-Integrated Systems Builder</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>Currently working as a Software Developer at a startup with 2+ years of experience building full-stack applications, exploring AI models, LLM agents, and creating complete end-to-end systems with a strong sense of design, functionality, and future-readiness.</p>
+</section>
+
+<section>
+  <h2>Concepts, Tech Skills, and Tools</h2>
+  <div class="grid">
+    <div class="card">JavaScript</div>
+    <div class="card">TypeScript</div>
+    <div class="card">Angular</div>
+    <div class="card">Node.js</div>
+    <div class="card">Express.js</div>
+    <div class="card">SQL</div>
+    <div class="card">PostgreSQL</div>
+    <div class="card">MongoDB</div>
+    <div class="card">Firebase</div>
+    <div class="card">Git</div>
+    <div class="card">GitHub</div>
+    <div class="card">Docker</div>
+    <div class="card">System Design</div>
+    <div class="card">REST APIs</div>
+    <div class="card">Microservices</div>
+    <div class="card">DevOps Basics</div>
+    <div class="card">AI Agents</div>
+    <div class="card">LangChain</div>
+    <div class="card">LLMs</div>
+    <div class="card">Python</div>
+    <div class="card">React</div>
+    <div class="card">HTML/CSS</div>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="grid">
+    <!-- Add 50 small project cards -->
+    <!-- Repeat sample cards to simulate 50 entries -->
+    <!-- This is just an illustrative snippet -->
+    <div class="card"><img src="https://via.placeholder.com/150" alt="Project" /><p>Chat App</p></div>
+    <div class="card"><img src="https://via.placeholder.com/150" alt="Project" /><p>Portfolio Website</p></div>
+    <!-- Repeat 48 more cards similarly -->
+  </div>
+</section>
+
+<section>
+  <h2>Resources I Learnt From</h2>
+  <div class="grid">
+    <div class="iframe-card"><iframe src="https://www.youtube.com/embed/FxsO2R2QUac"></iframe></div>
+    <div class="iframe-card"><iframe src="https://www.youtube.com/embed/qz0aGYrrlhU"></iframe></div>
+    <!-- Add more YouTube/website iframes -->
+  </div>
+</section>
+
+<section>
+  <h2>Blogs</h2>
+  <div class="grid">
+    <div class="blog-card">
+      <img src="https://via.placeholder.com/300x100" alt="Git Internals" />
+      <a href="https://linkedin.com/in/nishita" target="_blank">Understanding Git Internals →</a>
+    </div>
+    <!-- Add more blogs with images and links -->
+  </div>
+  <p><a href="https://linkedin.com/in/nishita" target="_blank">Visit Full Newsletter →</a></p>
+</section>
+
+<section>
+  <h2>Non-Tech Skills</h2>
+  <div class="grid">
+    <div class="card">Painting ✔</div>
+    <div class="card">Classical Dance ✔</div>
+    <div class="card">Yoga ✔</div>
+    <div class="card">Calisthenics ✔</div>
+    <!-- Add more with personal images optionally -->
+  </div>
+</section>
+
+<section>
+  <h2>Travel Diary</h2>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/150" alt="Trek" /><p>Triund Trek</p></div>
+    <div class="card"><img src="https://via.placeholder.com/150" alt="Place" /><p>Hampi</p></div>
+    <!-- Add more travel pictures with place names -->
+  </div>
+</section>
+
+<section>
+  <h2>Books I've Read</h2>
+  <div class="grid">
+    <div class="card"><img src="https://via.placeholder.com/100x150" alt="Book Cover" /></div>
+    <div class="card"><img src="https://via.placeholder.com/100x150" alt="Book Cover" /></div>
+    <!-- Add many more in a grid with fixed book sizes -->
+  </div>
+</section>
+
+<section>
+  <h2>What I Offer for Freelance</h2>
+  <p>I offer complete solutions from concept to production — be it SaaS, dashboards, AI automation tools, modern UI/UX, or tech integrations. I don't just code; I solve problems by combining development with intelligent use of AI tools and agents.</p>
+  <h3>Clients I've Worked With</h3>
+  <div class="grid">
+    <div class="card">Startup X</div>
+    <div class="card">AI Consultancy Y</div>
+    <div class="card">Tech Blog Builder</div>
+  </div>
+  <h3>Testimonials</h3>
+  <div class="grid">
+    <div class="card">"Nishita delivered beyond expectations, with creative solutions and timely execution."</div>
+    <div class="card">"Reliable, detail-oriented, and a joy to collaborate with!"</div>
+  </div>
+</section>
+
+<section>
+  <h2>Contact Me</h2>
+  <p>Email: nishita.dev@example.com</p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/nishita" target="_blank">linkedin.com/in/nishita</a></p>
+  <p>GitHub: <a href="https://github.com/nishita" target="_blank">github.com/nishita</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Nishita Ervantikar. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

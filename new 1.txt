@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { line-height: 1.6; background: #f5f5f5; color: #333; }
+    header, section { padding: 40px 20px; max-width: 1200px; margin: auto; }
+    header { background: #fff; color: #222; text-align: center; border-bottom: 1px solid #ddd; }
+    header img { width: 150px; border-radius: 50%; margin-bottom: 20px; }
+    h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    h2 { margin-bottom: 20px; font-size: 2rem; border-bottom: 2px solid #222; padding-bottom: 10px; }
+    nav { margin-top: 10px; }
+    nav a { margin: 0 10px; color: #007acc; text-decoration: none; font-size: 0.9rem; }
+    .grid, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+    .card { background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.1); text-align: center; font-size: 0.85rem; }
+    .card img { width: 100%; height: 100px; object-fit: cover; border-radius: 6px; margin-bottom: 5px; }
+    .tick-img { width: 100%; height: 150px; object-fit: cover; border-radius: 6px; }
+    .logos { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
+    .logos img { width: 40px; height: 40px; }
+    footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 40px; }
+    a { color: #007acc; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="your-profile-pic.jpg" alt="Profile Picture">
+    <h1>Your Name</h1>
+    <p>Full Stack Developer | Explorer | Generalist Problem Solver</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resources">Resources</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#nontech">Non-Tech</a>
+      <a href="#travel">Travel</a>
+      <a href="#books">Books</a>
+      <a href="#movies">Movies</a>
+      <a href="#freelance">Freelance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>What Do I Do?</h2>
+    <p>I'm a developer with 2+ years of experience at startups. I specialize in full stack web development, but also work with ML, agents, and automation to drive modern solutions. I use today's AI advancements like LLMs and agents subtly behind my work.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Concepts, Skills & Tools</h2>
+    <div class="logos">
+      <img src="logo-angular.png" alt="Angular"/>
+      <img src="logo-nodejs.png" alt="Node.js"/>
+      <img src="logo-python.png" alt="Python"/>
+      <img src="logo-git.png" alt="Git"/>
+      <img src="logo-ml.png" alt="ML"/>
+      <img src="logo-docker.png" alt="Docker"/>
+      <img src="logo-react.png" alt="React"/>
+      <img src="logo-ts.png" alt="TypeScript"/>
+      <img src="logo-sql.png" alt="SQL"/>
+      <img src="logo-devops.png" alt="DevOps"/>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <!-- Repeat for 36+ items -->
+      <div class="card"><img src="project1.png" alt="Project 1"><p>Project 1</p></div>
+      <div class="card"><img src="project2.png" alt="Project 2"><p>Project 2</p></div>
+      <div class="card"><img src="project3.png" alt="Project 3"><p>Project 3</p></div>
+      <!-- ... continue till 36+ -->
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2>Resources I Learnt From</h2>
+    <ul>
+      <li><a href="#">Full Stack Open</a></li>
+      <li><a href="#">Colt Steele Git Bootcamp</a></li>
+      <li><a href="#">The System Design Primer</a></li>
+      <li><a href="#">JavaScript.info</a></li>
+      <li><a href="#">CS50 by Harvard</a></li>
+      <li><a href="#">Python for Everybody</a></li>
+      <li><a href="#">ML Mastery Blog</a></li>
+      <li><a href="#">Roadmap.sh</a></li>
+      <li><a href="#">fireship.io</a></li>
+    </ul>
+  </section>
+
+  <section id="blogs">
+    <h2>My Blogs</h2>
+    <div class="grid">
+      <div class="card"><p>Git Internals Deep Dive</p></div>
+      <div class="card"><p>Modern DevOps Simplified</p></div>
+      <div class="card"><p>Using Agents in 2025</p></div>
+      <div class="card"><p>How LLMs Automate Work</p></div>
+      <div class="card"><p>System Design in Real Life</p></div>
+      <div class="card"><p>AI for Web Developers</p></div>
+      <div class="card"><p>How to Think Like a Dev</p></div>
+      <div class="card"><p>Microservices in Practice</p></div>
+      <div class="card"><p>What Makes Clean Code?</p></div>
+      <div class="card"><p>Debugging Systems Intuitively</p></div>
+    </div>
+    <p><a href="https://www.linkedin.com/newsletters/your-newsletter">Visit My Full Newsletter →</a></p>
+  </section>
+
+  <section id="nontech">
+    <h2>Non-Tech Skills</h2>
+    <div class="grid">
+      <div class="card"><img src="skill1.jpeg" class="tick-img" alt="Dance"><p>Classical Dance ✓</p></div>
+      <div class="card"><img src="yoga.jpg" class="tick-img" alt="Yoga"><p>Yoga ✓</p></div>
+      <div class="card"><img src="calisthenics.jpg" class="tick-img" alt="Calisthenics"><p>Calisthenics ✓</p></div>
+      <div class="card"><img src="painting.jpg" class="tick-img" alt="Painting"><p>Painting ✓</p></div>
+      <div class="card"><img src="trekking.jpg" class="tick-img" alt="Trekking"><p>Trekking ✓</p></div>
+    </div>
+  </section>
+
+  <section id="travel">
+    <h2>Travel Diary</h2>
+    <div class="gallery">
+      <img src="place1.jpg" alt="Place 1">
+      <img src="place2.jpg" alt="Place 2">
+      <img src="place3.jpg" alt="Place 3">
+      <img src="place4.jpg" alt="Place 4">
+      <img src="place5.jpg" alt="Place 5">
+      <!-- Keep adding -->
+    </div>
+  </section>
+
+  <section id="books">
+    <h2>Books I Read</h2>
+    <div class="gallery">
+      <img src="book1.jpg" alt="Book 1">
+      <img src="book2.jpg" alt="Book 2">
+      <img src="book3.jpg" alt="Book 3">
+      <img src="book4.jpg" alt="Book 4">
+      <img src="book5.jpg" alt="Book 5">
+      <!-- Add more -->
+    </div>
+  </section>
+
+  <section id="movies">
+    <h2>Movies I Recommend</h2>
+    <div class="gallery">
+      <img src="movie1.jpg" alt="Movie 1">
+      <img src="movie2.jpg" alt="Movie 2">
+      <img src="movie3.jpg" alt="Movie 3">
+      <img src="movie4.jpg" alt="Movie 4">
+      <img src="movie5.jpg" alt="Movie 5">
+      <!-- Add more -->
+    </div>
+  </section>
+
+  <section id="freelance">
+    <h2>What I Offer for Freelance</h2>
+    <p>I solve problems. You bring the challenge, I bring the solution — whether it's full stack development, automation, LLM-powered workflows, websites, system design, or integrations. I work across the stack and bring AI when it's needed.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>📧 your.email@example.com</p>
+    <p>🔗 <a href="https://www.linkedin.com/in/yourusername">LinkedIn</a> | 💻 <a href="https://github.com/yourusername">GitHub</a> | 📸 <a href="https://instagram.com/yourusername">Instagram</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name. Built with ❤️ for the future me.</p>
+  </footer>
+</body>
+</html>
